@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+header {
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+}
+nav ul {
+  list-style-type: none;
+}
+li {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav {
+  text-decoration: none;
+  position: relative;
+  padding-top :20px ;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: black;
+  padding-left: 20px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+}
+
+.nav::before {
+    content:"";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition: all 1s;
+}
+.nav:hover:before {
+    width:100%
+}
+
+.home {
+    border-left: 10px solid #5366c2;
+}
+.home::before{
+    background-color: #5366C2;
+}
+.about{
+    border-left:10px solid #3F83C0
+}
+.about::before{
+    background-color: #3F83C0;
+}
+.work{
+    border-left:10px solid #2AA1BD
+}
+.work::before{
+    background-color: #2AA1BD
+}
+.contact{
+    border-left:10px solid #15BFBB
+}
+.contact::before{
+    background-color: #15BFBB
+}
+
